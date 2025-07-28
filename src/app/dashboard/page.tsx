@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import Link from 'next/link'; // Although not directly used for navigation in this component, good practice to keep if other links are added.
 
 interface UserData {
   id: number;

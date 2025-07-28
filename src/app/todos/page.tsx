@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, FC } from 'react';
 import { useRouter } from 'next/navigation';
-import Link from 'next/link';
+
 
 // Define types for data structures
 interface UserData {
@@ -425,7 +425,7 @@ const TodosPage: FC = () => {
         {/* Top Bar for Main Content - Contains Title, Settings Icon, and Logout Button */}
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-3xl font-semibold text-gray-700">
-            {user?.name}'s {getFilteredTasks().length} {getMainContentTitle()}
+            {user?.name}&apos;s {getFilteredTasks().length} {getMainContentTitle()}
           </h2>
           <div className="flex items-center space-x-4">
             {/* Settings icon - Placeholder, no functionality */}

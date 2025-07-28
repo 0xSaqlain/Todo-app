@@ -5,7 +5,7 @@ import { NextResponse } from 'next/server';
 import prisma from '@/lib/prisma'; // Import the Prisma Client singleton
 
 // Define the PATCH handler for updating an existing task
-export async function PATCH(request: Request, { params }: { params: { id: string } }) {
+export async function PATCH(request: Request, { params }: { params: Promise< { id: string } >}) {
   try {
     // FIX: Await params before accessing its properties, as recommended by Next.js.
     const awaitedParams = await params;
@@ -69,7 +69,7 @@ export async function PATCH(request: Request, { params }: { params: { id: string
 }
 
 // --- DELETE handler: Deletes an existing task (Optional, for future expansion) ---
-export async function DELETE(request: Request, { params }: { params: { id: string } }) {
+export async function DELETE(request: Request, { params }: { params: Promise< { id: string } >}) {
   try {
     // FIX: Await params before accessing its properties.
     const awaitedParams = await params;

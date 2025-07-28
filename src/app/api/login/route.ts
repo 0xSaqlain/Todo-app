@@ -31,7 +31,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ message: 'Invalid credentials.' }, { status: 401 });
     }
 
-    const { passwordHash, ...userData } = user;
+    const {  ...userData } = user;
 
     return NextResponse.json({
       message: 'Login successful!',
